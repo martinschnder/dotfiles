@@ -1,0 +1,83 @@
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 566,
+                "width": 826,
+                "x": 0,
+                "y": 0
+            },
+            "marks": [],
+            "name": "Terminal - martin@martin-endev:~",
+            "percent": 0.5,
+            "swallows": [
+                {
+                    "class": "^Xfce4\\-terminal$",
+                    "instance": "^topleft$"
+                }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 566,
+                "width": 826,
+                "x": 0,
+                "y": 0
+            },
+            "marks": [],
+            "name": "Terminal - martin@martin-endev:~",
+            "percent": 0.5,
+            "swallows": [
+                {
+                    "class": "^Xfce4\\-terminal$",
+                    "instance": "^bottomleft$"
+                }
+            ],
+            "type": "con"
+        }
+    ]
+},
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 566,
+                "width": 826,
+                "x": 0,
+                "y": 0
+            },
+            "marks": [],
+            "name": "Terminal - martin@martin-endev:~",
+            "percent": 1,
+            "swallows": [
+                {
+                    "class": "^Xfce4\\-terminal$",
+                    "instance": "^right$"
+                }
+            ],
+            "type": "con"
+        }
+    ]
+}
