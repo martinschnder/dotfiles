@@ -51,9 +51,10 @@ vim.cmd([[
    use("hrsh7th/nvim-cmp") -- completion plugin
    use("hrsh7th/cmp-buffer") -- source for text in buffer
    use("hrsh7th/cmp-path") -- source for file system paths
-
+   --
    -- snippets
-   use("rafamadriz/friendly-snippets")
+   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+   use("rafamadriz/friendly-snippets") -- useful snippets
 
    -- managin and installing lsp servers
    use("williamboman/mason.nvim")
@@ -65,6 +66,10 @@ vim.cmd([[
    use({ "glepnir/lspsaga.nvim", branch = "main" })
    use("jose-elias-alvarez/typescript.nvim")
    use("onsails/lspkind.nvim")
+
+   -- formatting & linting
+   use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
    -- treesitter
    use({

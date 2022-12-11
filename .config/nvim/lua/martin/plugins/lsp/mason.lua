@@ -16,7 +16,7 @@ mason_lspconfig.setup({
     "cmake",
     "cssls",
     "html",
-    "pylsp",
+    "pyright",
     "tsserver",
   }
 })
