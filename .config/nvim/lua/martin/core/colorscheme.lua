@@ -1,14 +1,7 @@
+-- set colorscheme to nightfly with protected call
+-- in case it isn't installed
 local status, _ = pcall(vim.cmd, "colorscheme nightfly")
 if not status then
-    print("Colorscheme not found!")
-    return
+  print("Colorscheme not found!") -- print error if colorscheme not installed
+  return
 end
-
-vim.api.nvim_command([[
-    augroup ChangeBackgroudColour
-        autocmd colorscheme * :hi normal guibg=#282C34
-    augroup END
-]])
-
-vim.o.termguicolors = true
-vim.cmd [[silent! colorscheme snow]]

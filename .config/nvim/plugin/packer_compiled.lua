@@ -79,10 +79,10 @@ _G.packer_plugins = {
     path = "/home/martin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ReplaceWithRegister = {
+  LuaSnip = {
     loaded = true,
-    path = "/home/martin/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
-    url = "https://github.com/vim-scripts/ReplaceWithRegister"
+    path = "/home/martin/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -108,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/martin/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/martin/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -170,9 +175,16 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
+    load_after = {},
     loaded = true,
-    path = "/home/martin/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    needs_bufread = false,
+    path = "/home/martin/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/martin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -199,6 +211,16 @@ _G.packer_plugins = {
     path = "/home/martin/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
+  ["vim-ReplaceWithRegister"] = {
+    loaded = true,
+    path = "/home/martin/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
+    url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
+  },
+  ["vim-maximizer"] = {
+    loaded = true,
+    path = "/home/martin/.local/share/nvim/site/pack/packer/start/vim-maximizer",
+    url = "https://github.com/szw/vim-maximizer"
+  },
   ["vim-nightfly-guicolors"] = {
     loaded = true,
     path = "/home/martin/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
@@ -217,6 +239,11 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-ts-autotag ]]
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

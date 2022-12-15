@@ -111,3 +111,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Enabling vi mode
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey ^P up-line-or-search
+bindkey ^R history-incremental-search-backward
+bindkey ^S history-incremental-search-backward
